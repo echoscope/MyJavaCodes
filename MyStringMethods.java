@@ -1,5 +1,5 @@
 
-public class MyString {
+public class MyStringMethods {
 
     /** 
     * String Divide
@@ -43,8 +43,36 @@ public class MyString {
         return subStrs;
     }
     
+    /**
+     * String to Paragraph
+     * <p>
+     * This method received an array of String and combine each as a line to a paragraph.
+     * 
+     * @param strs The String array represent many lines
+     * @return A String that represent a paragraph
+     */
+    public static String toParagraph(String[] strs) {
+        String str = "";
+        int i = 0;
+        while(i < strs.length) {
+            str += strs[i];
+            i++;
+            if(i != strs.length) {
+                str += "\n";
+            }
+        }
+        return str;
+    }
     
-    
-    
+    /**
+    * Print Strings
+    * <p>
+    * This method prints given String array as a paragraph to System Standard Output (System.out).
+    * 
+    * @param strs The String array to be printed.
+    */
+    public static void printStrs(String[] strs) {
+    	System.out.println(Main.toParagraph(strs));
+    }
     
 }
