@@ -1,6 +1,10 @@
 
 public class MyStringMethods {
 
+    /*
+     * String methods
+     */
+
     /** 
     * String Divide
     * <p>
