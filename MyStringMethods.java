@@ -6,17 +6,17 @@ public class MyStringMethods {
      */
 
     /** 
-    * String Divide
-    * <p>
-    * This method divides a String into substrings of equal length.
-    * The method generates an array of String that store those substrings.
-    * Substrings that don't have enough characters to fulfill the equal length will be appended with given placeholder.
-    * 
-    * @param str The String to be divided
-    * @param splitLength The length of splitting
-    * @param placeholder The placeholder
-    * @return A String array to store substrings
-    */ 
+     * String Divide
+     * <p>
+     * This method divides a String into substrings of equal length.
+     * The method generates an array of String that store those substrings.
+     * Substrings that don't have enough characters to fulfill the equal length will be appended with given placeholder.
+     * 
+     * @param str The String to be divided
+     * @param splitLength The length of splitting
+     * @param placeholder The placeholder
+     * @return A String array to store substrings
+     */ 
     public static String[] StringDivide(String str, int splitLength, char placeholder) {
         int numofSubStrs;
         if(str.length() % splitLength == 0){
@@ -69,12 +69,12 @@ public class MyStringMethods {
     }
     
     /**
-    * Print Strings
-    * <p>
-    * This method prints given String array as a paragraph to System Standard Output (System.out).
-    * 
-    * @param strs The String array to be printed.
-    */
+     * Print Strings
+     * <p>
+     * This method prints given String array as a paragraph to System Standard Output (System.out).
+     * 
+     * @param strs The String array to be printed.
+     */
     public static void printStrs(String[] strs) {
     	System.out.println(Main.toParagraph(strs));
     }
