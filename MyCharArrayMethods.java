@@ -4,21 +4,40 @@ public class MyCharArrayMethods {
 	/*
 	 * Char Array Methods
 	 */
-	
+
 	/**
 	 * The string ending character 'EOF' definition in the char array
 	 */
 	private static final char EOF = '\0';
+	
+	/**
+	 * Get all characters that exits in the given String
+	 * 
+	 * @param str The given string
+	 * @return A char array of all characters exists in the String.
+	 */
+	public static char[] getAllCharacters(String str) {
+		char[] chars = str.toCharArray();
+		char[] allCharacters = new char[chars.length]; Main.initialize(allCharacters);
+		int i = 0;
+		while(i < chars.length) {
+			if(!Main.contains(allCharacters, chars[i])) {
+				Main.append(allCharacters, chars[i]);
+			}
+			i++;
+		}
+		return allCharacters;
+	}
 
-	 /**
-	  * Whether contains all given chars
-	  * <p>
-	  * The method checks whether a given char set all exits in another given char set.
-	  * 
-	  * @param chars The char set that need to be checked.
-	  * @param target The char set that need to be check existence
-	  * @return Result
-	  */
+	/**
+	 * Whether contains all given chars
+	 * <p>
+	 * The method checks whether a given char set all exits in another given char set.
+	 * 
+	 * @param chars The char set that need to be checked.
+	 * @param target The char set that need to be check existence
+	 * @return Result
+	 */
 	public static boolean containsAll(char[] chars, char[] target) {
 		int length = Main.getLength(target);
 		int i = 0;
@@ -30,7 +49,7 @@ public class MyCharArrayMethods {
 		}
 		return true;
 	}
-	
+
 	/**
 	 * Whether contains a specified char
 	 * <p>
@@ -40,7 +59,7 @@ public class MyCharArrayMethods {
 	 * @param chars The given char array
 	 * @param c The given char
 	 * @return Result
-	 */
+	*/
 	public static boolean contains(char[] chars, char c) {
 		int length = Main.getLength(chars);
 		int i = 0;
@@ -52,7 +71,7 @@ public class MyCharArrayMethods {
 		}
 		return false;
 	}
-	
+
 	/**
 	 * Char appending
 	 * <p>
@@ -71,10 +90,10 @@ public class MyCharArrayMethods {
 			return true;
 		}
 	}
-	
+
 	/**
-	 * Print char array
-	 * <p>
+ 	 * Print char array
+     * <p>
 	 * Print char array to Standard output device.
 	 */
 	public static void printChars(char[] chars) {
@@ -88,7 +107,7 @@ public class MyCharArrayMethods {
 			}
 		}
 	}
-	
+
 	/**
 	 * Get char array length
 	 * <p>
@@ -108,7 +127,7 @@ public class MyCharArrayMethods {
 		}
 		return chars.length;
 	}
-	
+
 	/**
 	 * char array initializer
 	 * <p>
@@ -123,12 +142,5 @@ public class MyCharArrayMethods {
 			i++;
 		}
 	}
-
-
-
-
-
-
-
-
+	
 }
