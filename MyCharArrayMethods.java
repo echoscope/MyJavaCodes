@@ -18,11 +18,11 @@ public class MyCharArrayMethods {
 	 */
 	public static char[] getAllCharacters(String str) {
 		char[] chars = str.toCharArray();
-		char[] allCharacters = new char[chars.length]; Main.initialize(allCharacters);
+		char[] allCharacters = new char[chars.length]; MyCharArrayMethods.initialize(allCharacters);
 		int i = 0;
 		while(i < chars.length) {
-			if(!Main.contains(allCharacters, chars[i])) {
-				Main.append(allCharacters, chars[i]);
+			if(!MyCharArrayMethods.contains(allCharacters, chars[i])) {
+				MyCharArrayMethods.append(allCharacters, chars[i]);
 			}
 			i++;
 		}
@@ -61,7 +61,7 @@ public class MyCharArrayMethods {
 	 * @return Result
 	*/
 	public static boolean contains(char[] chars, char c) {
-		int length = Main.getLength(chars);
+		int length = MyCharArrayMethods.getLength(chars);
 		int i = 0;
 		while(i < length) {
 			if(chars[i] == c) {
@@ -82,7 +82,7 @@ public class MyCharArrayMethods {
 	 * @return true if append successfully, false if not enough space in the given char array.
 	 */
 	public static boolean append(char[] chars, char c) {
-		int length = Main.getLength(chars);
+		int length = MyCharArrayMethods.getLength(chars);
 		if(length == chars.length && length != 0) {
 			return false;
 		} else {
@@ -97,7 +97,7 @@ public class MyCharArrayMethods {
 	 * Print char array to Standard output device.
 	 */
 	public static void printChars(char[] chars) {
-		int length = Main.getLength(chars);
+		int length = MyCharArrayMethods.getLength(chars);
 		int i = 0;
 		while(i < length) {
 			System.out.print(chars[i]);
