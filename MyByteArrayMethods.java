@@ -4,6 +4,28 @@ public class MyByteArrayMethods {
     /*
      * byte array methods
      */
+	
+	/**
+	 * Reverse byte array by a specified index range
+	 * 
+	 * @param bytes The byte array need to be reversed
+	 * @param beginIndex Beginning index
+	 * @param endIndex Ending index
+	 * @return The reversed index (original memory space)
+	 */
+	public static byte[] reverse(byte[] bytes, int beginIndex, int endIndex) {
+		byte t = 0;
+		int i = beginIndex;
+		int j = endIndex;
+		while (i < j) {
+			t = bytes[i];
+			bytes[i] = bytes[j];
+			bytes[j] = t;
+			i++;
+			j--;
+		}
+		return bytes;
+	}
      
     /**
 	 * Right shifting (moving) of a byte Array
