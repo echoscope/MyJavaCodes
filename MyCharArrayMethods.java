@@ -9,7 +9,7 @@ public class MyCharArrayMethods {
 	 * The string ending character 'EOF' definition in the char array
 	 */
 	private static final char EOF = '\0';
-	
+
 	/**
 	 * Get all characters that exits in the given String
 	 * 
@@ -71,7 +71,56 @@ public class MyCharArrayMethods {
 		}
 		return false;
 	}
-
+	
+	/**
+	 * Sort char array respectively
+	 * <p>
+	 * This method sort a String in a char array respectively in odd and even.
+	 * 
+	 * @param chars The char array need to be sorted.
+	 * @return
+	 */
+	public static char[] sortRespectively(char[] chars) {
+		int length = Main.getLength(chars);
+		// Sort odds
+		int i = 0;
+		while (i < length) {
+			int j = i;
+			while (j < length) {
+				if (i != j) {
+					if (chars[i] > chars[j]) {
+						char t = chars[i];
+						chars[i] = chars[j];
+						chars[j] = t;
+					}
+				} else {
+					// Do nothing
+				}
+				j += 2;
+			}
+			i += 2;
+		}
+		// Sort even
+		i = 1;
+		while (i < length) {
+			int j = i;
+			while (j < length) {
+				if (i != j) {
+					if (chars[i] > chars[j]) {
+						char t = chars[i];
+						chars[i] = chars[j];
+						chars[j] = t;
+					}
+				} else {
+					// Do nothing
+				}
+				j += 2;
+			}
+			i += 2;
+		}
+		return chars;
+	}
+	
 	/**
 	 * Char appending
 	 * <p>
