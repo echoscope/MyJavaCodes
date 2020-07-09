@@ -3,7 +3,7 @@ public class JavaBitOperationMethods {
 
     public static void bitOperationExample() {
     
-        // Bit operation example: 23
+		// Bit operation example: 23
 		/*
 		 * 23 0001 0111
 		 * 
